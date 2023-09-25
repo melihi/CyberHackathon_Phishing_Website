@@ -14,7 +14,7 @@ gbc = pickle.load(file)
 file.close()
 
 app = Flask(__name__)
-server = app.server
+server = app
 
 @app.route("/", methods=["GET", "POST"])
 def index():
