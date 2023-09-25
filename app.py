@@ -13,8 +13,8 @@ file = open("pickle/model.pkl","rb")
 gbc = pickle.load(file)
 file.close()
 
-
 app = Flask(__name__)
+server = app.server
 
 @app.route("/", methods=["GET", "POST"])
 def index():
@@ -36,4 +36,4 @@ def index():
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(port=8000,debug=False)
