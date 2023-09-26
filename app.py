@@ -12,7 +12,6 @@ from feature import FeatureExtraction
 file = open("pickle/model.pkl","rb")
 gbc = pickle.load(file)
 file.close()
-
 app = Flask(__name__)
 server = app
 
@@ -36,4 +35,4 @@ def index():
 
 
 if __name__ == "__main__":
-    app.run(debug=False)
+    app.run(debug=True)
