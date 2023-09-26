@@ -91,7 +91,7 @@
         <br>
         <h3 id="prediction"></h3>
         <button class="button2" id="button2" role="button" onclick="window.open('{{url}}')" target="_blank" >Still want to Continue</button>
-        <button class="button1" id="button1" role="button"  onclick="window.open('{{url}}')" target="_blank">Continue</button>
+        <button class="button1" id="button1" role="button"  onclick="window.open('{{url}}')" target="_blank">Go to the Website</button>
     </div> 
 </div>
 <br>
@@ -152,12 +152,12 @@
                 num = 100-num;
             }
             let txtx = num.toString();
-            if(x<=1 && x>=0.50){
+            if(x<=1 && x>=0.80){
                 var label = "Website is "+txtx +"% safe to use...";
                 document.getElementById("prediction").innerHTML = label;
                 document.getElementById("button1").style.display="block";
             }
-            else if (0<=x && x<0.50){
+            else if (0<=x && x<0.80){
                 var label = "Website is "+txtx +"% unsafe to use..."
                 document.getElementById("prediction").innerHTML = label ;
                 document.getElementById("button2").style.display="block";
